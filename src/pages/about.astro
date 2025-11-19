@@ -3,155 +3,187 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-const team = [
+const providers = [
   {
-    name: 'John Anderson',
-    role: 'Founder & Lead Designer',
-    image: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    bio: 'With over 20 years of experience in landscape design, John brings creativity and expertise to every project.'
+    name: 'Dr. Denise Y. Belisle',
+    credentials: 'MD, FACOG',
+    title: 'Board Certified in Obstetrics & Gynecology',
+    bio: 'Dr. Denise Belisle is a board-certified obstetrician and gynecologist with over 25 years of experience in women\'s health. She graduated from Rutgers Robert Wood Johnson Medical School in 1998 and has dedicated her career to providing comprehensive, compassionate care to women of all ages. Dr. Belisle has hospital affiliations with Chandler Regional Medical Center and Mercy Gilbert Medical Center.',
+    specialties: ['Obstetrics', 'Gynecology', 'Well Woman Care', 'Menopausal Management']
   },
   {
-    name: 'Sarah Martinez',
-    role: 'Operations Manager',
-    image: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    bio: 'Sarah ensures every project runs smoothly from start to finish, maintaining our high standards of quality.'
-  },
-  {
-    name: 'Mike Thompson',
-    role: 'Hardscape Specialist',
-    image: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    bio: 'Mike specializes in patios, walkways, and retaining walls with meticulous attention to detail.'
+    name: 'Dr. Mia Lynne Van Eken',
+    credentials: 'DO, FACOG, MBA',
+    title: 'Board Certified in OB/GYN & MIGS',
+    bio: 'Dr. Mia Van Eken is a board-certified obstetrician and gynecologist with additional certification in Minimally Invasive Gynecologic Surgery (MIGS). She is one of only a few MIGS-certified surgeons in Arizona. With over 25 years of experience, Dr. Van Eken brings both clinical excellence and business acumen to the practice, having earned her MBA from Saint Joseph\'s University. She specializes in advanced surgical techniques that offer faster recovery times and better outcomes for patients.',
+    specialties: ['Minimally Invasive Surgery', 'Gynecology', 'Pelvic Floor Disorders', 'Advanced Laparoscopy']
   }
-];
-
-const certifications = [
-  'Licensed Landscape Contractor',
-  'Certified Irrigation Designer',
-  'OSHA Safety Certified',
-  'EPA Lead-Safe Certified',
-  'Fully Insured & Bonded'
 ];
 ---
 
-<Layout title="About Us" description="Learn about our team, values, and commitment to exceptional landscaping">
+<Layout title="About Us" description="Learn about East Valley Women for Women - the best all-female OB/GYN practice in Arizona">
   <Navigation />
 
   <!-- Hero Section -->
   <section class="relative h-96 flex items-center justify-center bg-primary-700">
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920'); mix-blend-mode: overlay;"></div>
-
     <div class="relative z-10 text-center text-white px-4">
-      <h1 class="text-5xl font-bold mb-4">About Us</h1>
+      <h1 class="text-5xl font-bold mb-4">About Our Practice</h1>
       <p class="text-xl text-gray-100">
-        Transforming landscapes, building relationships
+        All-female staff dedicated to complete women's health care
       </p>
     </div>
   </section>
 
-  <!-- Our Story -->
+  <!-- About Our Practice -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">About Our Practice</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920"
-              alt="Our team at work"
-              class="rounded-lg shadow-lg"
-            />
-          </div>
+        <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+          <p>
+            At East Valley Women for Women, we offer complete gynecologic services from our all female staff of GYN doctors, nurse practitioners, and physician assistants. We look forward to serving you in all areas of women's health, including teen health, menopausal and bone health, breast health, and heart health. Our goal is to develop a personal relationship with you and address all the needs, concerns, and questions you have that impact your health as a woman. We offer in house ultrasound services with 3D/4D capability for our gynecologic patients. All of our doctors, nurse practitioners, and staff are highly trained in gynecology and look forward to serving you in any need that you have.
+          </p>
 
-          <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
-            <p>
-              Founded in 2010, GreenScape Pro began with a simple mission: to create beautiful, sustainable outdoor spaces that enhance our clients' quality of life.
+          <p>
+            Please see our Providers section below to become familiar with our practice. You may download forms from our website by accessing <a href="/forms" class="text-primary-600 hover:text-primary-700 font-semibold">Forms</a>. This will help you streamline your first office visit by having necessary paperwork filled out prior to your visit. Again, Welcome to East Valley Women for Women!
+          </p>
+
+          <div class="bg-gray-50 p-8 rounded-lg mt-8">
+            <h3 class="text-2xl font-bold text-primary-700 mb-4">Complete Gynecologic Care</h3>
+            <p class="mb-4">
+              At East Valley Women for Women we offer complete gynecologic (GYN) care serving the Chandler-Gilbert area including:
             </p>
-            <p>
-              What started as a small lawn care business has grown into a full-service landscaping company serving residential and commercial clients throughout the area. Our success is built on a foundation of quality workmanship, reliable service, and genuine care for our clients' vision.
-            </p>
-            <p>
-              Today, we're proud to be one of the most trusted landscaping companies in the region, with hundreds of satisfied clients and a team of dedicated professionals who share our passion for creating exceptional outdoor spaces.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>In office colposcopies</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Endometrial biopsies</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>LEEP procedure</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Cryotherapy</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Well woman exams</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>3D/4D Ultrasound</span>
+                </li>
+              </ul>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Infertility workup</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Birth control management</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Menopausal management</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Pelvic floor relaxation</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>Stress incontinence / TVT procedure</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>STD detection and management</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
+  <!-- Providers Section -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-        <p class="text-xl text-gray-600">The principles that guide everything we do</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-white p-8 rounded-lg shadow-md text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Quality</h3>
-          <p class="text-gray-600">
-            We never compromise on quality. Every project receives our full attention and expertise.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-md text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Integrity</h3>
-          <p class="text-gray-600">
-            Honest communication, transparent pricing, and doing what we say we'll do.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-md text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Sustainability</h3>
-          <p class="text-gray-600">
-            Environmentally responsible practices and water-efficient landscape solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Providers</h2>
         <p class="text-xl text-gray-600">
-          Experienced professionals dedicated to your satisfaction
+          Board-certified experts dedicated to your health and wellbeing
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {team.map((member) => (
-          <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <img
-              src={member.image}
-              alt={member.name}
-              class="w-full h-64 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-              <p class="text-primary-600 font-semibold mb-3">{member.role}</p>
-              <p class="text-gray-600">{member.bio}</p>
+      <div class="max-w-5xl mx-auto space-y-12">
+        {providers.map((provider, index) => (
+          <div class={`bg-white rounded-lg shadow-lg overflow-hidden ${index % 2 === 0 ? '' : ''}`}>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+              <div class="bg-primary-700 p-8 text-white flex flex-col justify-center items-center text-center">
+                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-20 h-20 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">{provider.name}</h3>
+                <p class="text-lg font-semibold text-primary-100 mb-1">{provider.credentials}</p>
+                <p class="text-sm text-primary-200">{provider.title}</p>
+              </div>
+
+              <div class="md:col-span-2 p-8">
+                <div class="mb-6">
+                  <h4 class="text-lg font-bold text-gray-900 mb-3">About</h4>
+                  <p class="text-gray-700 leading-relaxed">
+                    {provider.bio}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 mb-3">Specialties</h4>
+                  <div class="flex flex-wrap gap-2">
+                    {provider.specialties.map((specialty) => (
+                      <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -159,54 +191,29 @@ const certifications = [
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Licensed & Certified</h2>
-          <p class="text-xl text-gray-600">
-            Professional credentials you can trust
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <ul class="space-y-4">
-            {certifications.map((cert) => (
-              <li class="flex items-center text-lg">
-                <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                <span class="text-gray-700">{cert}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div class="mt-8 p-6 bg-primary-50 rounded-lg">
-            <p class="text-gray-700">
-              <strong>License #:</strong> LC-12345-2024<br>
-              <strong>Insurance:</strong> $2M General Liability<br>
-              <strong>Workers Comp:</strong> Full Coverage
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA Section -->
   <section class="py-20 bg-primary-600 text-white">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4">Work With Professionals You Can Trust</h2>
+      <h2 class="text-4xl font-bold mb-4">Experience Compassionate, Expert Care</h2>
       <p class="text-xl mb-8 text-primary-100">
-        Experience the GreenScape Pro difference
+        Schedule your appointment with East Valley Women for Women today
       </p>
-      <a
-        href="/contact"
-        class="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-      >
-        Get Your Free Quote
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:480-597-4835"
+          class="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+        >
+          Call (480) 597-4835
+        </a>
+        <a
+          href="https://30624-1.portal.athenahealth.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-primary-700 text-white border-2 border-white px-8 py-4 rounded-lg hover:bg-primary-800 transition-colors font-semibold text-lg"
+        >
+          Patient Portal
+        </a>
+      </div>
     </div>
   </section>
 
