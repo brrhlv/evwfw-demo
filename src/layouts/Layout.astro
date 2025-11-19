@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Professional landscaping services for your home or business" } = Astro.props;
+const { title, description = "East Valley Women for Women - Premier all-female OB/GYN practice in Chandler, Arizona" } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +14,16 @@ const { title, description = "Professional landscaping services for your home or
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | GreenScape Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>{title} | East Valley Women for Women</title>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-900">
     <slot />
