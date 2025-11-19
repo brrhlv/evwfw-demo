@@ -1,0 +1,98 @@
+        <!-- Service 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Complete Gynecologic Care</h3>
+          <p class="text-gray-600 mb-4">
+            Comprehensive GYN services including well woman exams, preventive care, and wellness treatments
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Obstetrics</h3>
+          <p class="text-gray-600 mb-4">
+            Prenatal care, pregnancy management, childbirth services, and postpartum support
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Urinary Incontinence</h3>
+          <p class="text-gray-600 mb-4">
+            Treatment options for bladder control issues and urinary leakage
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Gynecological Problems</h3>
+          <p class="text-gray-600 mb-4">
+            Expert diagnosis and treatment for a wide range of gynecological conditions
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Heavy or Irregular Periods</h3>
+          <p class="text-gray-600 mb-4">
+            Effective treatments including NovaSure ablation for abnormal uterine bleeding
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Vaginal Rejuvenation</h3>
+          <p class="text-gray-600 mb-4">
+            Advanced procedures to restore comfort, function, and confidence
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Permanent Birth Control</h3>
+          <p class="text-gray-600 mb-4">
+            Safe and effective permanent contraception options including tubal ligation
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">Minimally Invasive Surgery</h3>
+          <p class="text-gray-600 mb-4">
+            Board-certified MIGS surgeon offering advanced surgical techniques with faster recovery
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-3 text-primary-700">TeleMedicine & TeleHealth</h3>
+          <p class="text-gray-600 mb-4">
+            Remote consultations and care for established patients when appropriate
+          </p>
+          <a href="/services" class="text-primary-600 hover:text-primary-700 font-semibold">
+            Learn More →
+          </a>
+        </div>
