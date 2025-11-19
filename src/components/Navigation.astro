@@ -1,8 +1,15 @@
 ---
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Testimonials', href: '/testimonials' },
+  { name: 'Providers', href: '/providers' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Forms', href: '/forms' },
+  { name: 'Insurance', href: '/insurance' },
+  { name: 'Locations', href: '/locations' },
+  { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -20,8 +27,8 @@ const currentPath = Astro.url.pathname;
         <span class="text-xl md:text-2xl font-bold text-gray-900">EVWFW</span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <ul class="hidden md:flex space-x-8">
+      <!-- Desktop Navigation - Compact for many items -->
+      <ul class="hidden lg:flex space-x-4 text-sm">
         {navItems.map((item) => (
           <li>
             <a
@@ -39,7 +46,7 @@ const currentPath = Astro.url.pathname;
       <!-- CTA Button -->
       <a
         href="tel:480-597-4835"
-        class="hidden md:block bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+        class="hidden lg:block bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
       >
         (480) 597-4835
       </a>
@@ -47,7 +54,7 @@ const currentPath = Astro.url.pathname;
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="md:hidden text-gray-700 focus:outline-none"
+        class="lg:hidden text-gray-700 focus:outline-none"
         aria-label="Toggle menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +64,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="hidden lg:hidden pb-4">
       <ul class="space-y-2">
         {navItems.map((item) => (
           <li>
