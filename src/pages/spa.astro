@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const spaCategories = [
+  {
+    category: 'Facial Treatments',
+    icon: '✨',
+    services: [
+      { name: 'HydraFacial MD', description: 'Deep cleansing, exfoliation, and hydration for radiant skin', duration: '60 min' },
+      { name: 'Anti-Aging Facial', description: 'Target fine lines and wrinkles with peptides and antioxidants', duration: '75 min' },
+      { name: 'Signature European Facial', description: 'Customized treatment for all skin types', duration: '60 min' },
+      { name: 'Acne Clarifying Facial', description: 'Deep pore cleansing and purifying treatment', duration: '60 min' },
+      { name: 'Brightening Vitamin C Facial', description: 'Illuminate and even skin tone', duration: '60 min' },
+      { name: 'Chemical Peel', description: 'Exfoliate and reveal fresh, glowing skin', duration: '45 min' }
+    ]
+  },
+  {
+    category: 'Injectables & Aesthetics',
+    icon: '💉',
+    services: [
+      { name: 'Botox®', description: 'Reduce fine lines and wrinkles', duration: '30 min' },
+      { name: 'Dermal Fillers', description: 'Restore volume and smooth lines (Juvéderm, Restylane)', duration: '45 min' },
+      { name: 'Lip Enhancement', description: 'Natural-looking lip augmentation', duration: '30 min' },
+      { name: 'PDO Thread Lift', description: 'Non-surgical lifting and tightening', duration: '90 min' },
+      { name: 'Kybella®', description: 'Eliminate stubborn submental fat', duration: '30 min' },
+      { name: 'Sculptra®', description: 'Stimulate collagen for natural volume restoration', duration: '45 min' }
+    ]
+  },
+  {
+    category: 'Laser & Light Therapy',
+    icon: '⚡',
+    services: [
+      { name: 'IPL Photofacial', description: 'Reduce sun damage, age spots, and redness', duration: '45 min' },
+      { name: 'Laser Hair Removal', description: 'Permanent hair reduction for all areas', duration: '30-90 min' },
+      { name: 'Laser Skin Resurfacing', description: 'Improve texture, scars, and wrinkles', duration: '60 min' },
+      { name: 'Vascular Laser Treatment', description: 'Treat spider veins and broken capillaries', duration: '30 min' },
+      { name: 'Pigmentation Removal', description: 'Target dark spots and hyperpigmentation', duration: '30 min' },
+      { name: 'Skin Tightening', description: 'Radiofrequency treatment for firmer skin', duration: '60 min' }
+    ]
+  },
+  {
+    category: 'Body Treatments',
+    icon: '💆',
+    services: [
+      { name: 'Body Contouring', description: 'Non-invasive fat reduction and sculpting', duration: '60 min' },
+      { name: 'CoolSculpting®', description: 'Freeze away stubborn fat cells', duration: '60-120 min' },
+      { name: 'Cellulite Reduction', description: 'Smooth and firm treatment areas', duration: '60 min' },
+      { name: 'Microneedling Body', description: 'Improve skin texture and scars', duration: '90 min' },
+      { name: 'Full Body Exfoliation', description: 'Polish and renew skin all over', duration: '60 min' },
+      { name: 'Stretch Mark Treatment', description: 'Minimize the appearance of stretch marks', duration: '60 min' }
+    ]
+  },
+  {
+    category: 'Skin Rejuvenation',
+    icon: '🌟',
+    services: [
+      { name: 'Microneedling with PRP', description: 'Vampire facial for ultimate rejuvenation', duration: '90 min' },
+      { name: 'Dermaplaning', description: 'Exfoliate and remove vellus hair', duration: '45 min' },
+      { name: 'Microdermabrasion', description: 'Deep exfoliation for smooth, radiant skin', duration: '45 min' },
+      { name: 'Oxygen Facial', description: 'Infuse skin with pure oxygen and serums', duration: '60 min' },
+      { name: 'LED Light Therapy', description: 'Reduce inflammation and promote healing', duration: '30 min' },
+      { name: 'Ultrasonic Facial', description: 'Deep cleansing and product penetration', duration: '60 min' }
+    ]
+  },
+  {
+    category: 'Intimate Wellness',
+    icon: '🌸',
+    services: [
+      { name: 'Vaginal Rejuvenation', description: 'Non-surgical laser treatment for vaginal health', duration: '30 min' },
+      { name: 'O-Shot®', description: 'PRP treatment for enhanced intimacy', duration: '45 min' },
+      { name: 'Labial Puffing', description: 'Restore volume and appearance', duration: '30 min' },
+      { name: 'Intimate Skin Lightening', description: 'Even skin tone in delicate areas', duration: '45 min' },
+      { name: 'ThermiVa®', description: 'Non-invasive vaginal tightening', duration: '30 min' },
+      { name: 'Perineoplasty Consultation', description: 'Discuss surgical rejuvenation options', duration: '30 min' }
+    ]
+  },
+  {
+    category: 'Specialty Treatments',
+    icon: '💎',
+    services: [
+      { name: 'IV Vitamin Therapy', description: 'Boost wellness with custom vitamin infusions', duration: '45-60 min' },
+      { name: 'PRP Hair Restoration', description: 'Stimulate hair growth naturally', duration: '60 min' },
+      { name: 'Sclerotherapy', description: 'Eliminate spider and varicose veins', duration: '30-45 min' },
+      { name: 'Skin Tag Removal', description: 'Quick and comfortable removal', duration: '15-30 min' },
+      { name: 'Mole Removal', description: 'Safe cosmetic mole removal', duration: '30 min' },
+      { name: 'Scar Revision', description: 'Improve the appearance of scars', duration: '45-60 min' }
+    ]
+  },
+  {
+    category: 'Wellness & Relaxation',
+    icon: '🧘',
+    services: [
+      { name: 'Therapeutic Massage', description: 'Full body relaxation and muscle relief', duration: '60-90 min' },
+      { name: 'Aromatherapy Session', description: 'Relaxation with essential oils', duration: '60 min' },
+      { name: 'Lymphatic Drainage', description: 'Detoxify and reduce swelling', duration: '60 min' },
+      { name: 'Hot Stone Massage', description: 'Deep relaxation with heated stones', duration: '75 min' },
+      { name: 'Reflexology', description: 'Pressure point therapy for wellness', duration: '45 min' },
+      { name: 'Stress Relief Package', description: 'Combination of treatments for ultimate relaxation', duration: '120 min' }
+    ]
+  }
+];
+---
+
+<Layout title="Medical Spa Services" description="Luxurious medical spa treatments at East Valley Women for Women">
+  <Navigation />
+
+  <!-- Hero Section -->
+  <section class="relative h-96 flex items-center justify-center bg-gradient-to-r from-primary-600 to-primary-700">
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-5xl font-bold mb-4">Medical Spa</h1>
+      <p class="text-xl text-primary-50">
+        Luxurious treatments in a medical setting for optimal results
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Experience Medical-Grade Spa Treatments</h2>
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          At East Valley Women for Women Medical Spa, we combine medical expertise with luxurious spa treatments. Our board-certified providers and licensed aestheticians offer the latest in non-surgical cosmetic procedures and rejuvenating spa services in a safe, comfortable environment.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <div class="flex items-center space-x-2 text-accent-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="font-semibold">Board-Certified Providers</span>
+          </div>
+          <div class="flex items-center space-x-2 text-accent-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="font-semibold">State-of-the-Art Technology</span>
+          </div>
+          <div class="flex items-center space-x-2 text-accent-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="font-semibold">Medical-Grade Results</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services by Category -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 gap-12">
+          {spaCategories.map((category) => (
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6">
+                <div class="flex items-center space-x-3">
+                  <span class="text-4xl">{category.icon}</span>
+                  <h3 class="text-3xl font-bold">{category.category}</h3>
+                </div>
+              </div>
+              <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.services.map((service) => (
+                    <div class="border border-gray-200 rounded-lg p-5 hover:border-primary-400 hover:shadow-md transition-all">
+                      <h4 class="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>
+                      <p class="text-gray-600 text-sm mb-3">{service.description}</p>
+                      <div class="flex items-center justify-between">
+                        <span class="text-accent-600 font-semibold text-sm flex items-center">
+                          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          {service.duration}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Packages -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Special Spa Packages</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 text-center">
+            <h3 class="text-2xl font-bold text-primary-800 mb-3">Bridal Package</h3>
+            <p class="text-gray-700 mb-4">Prepare for your special day with our comprehensive bridal beauty treatments</p>
+            <span class="text-primary-600 font-bold">Custom Consultation</span>
+          </div>
+          <div class="bg-gradient-to-br from-accent-50 to-accent-100 rounded-xl p-6 text-center">
+            <h3 class="text-2xl font-bold text-accent-800 mb-3">Wellness Retreat</h3>
+            <p class="text-gray-700 mb-4">Full day of pampering including massage, facial, and body treatments</p>
+            <span class="text-accent-600 font-bold">4-6 Hours</span>
+          </div>
+          <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 text-center">
+            <h3 class="text-2xl font-bold text-primary-800 mb-3">Mother's Day Special</h3>
+            <p class="text-gray-700 mb-4">Treat mom to a rejuvenating experience she deserves</p>
+            <span class="text-primary-600 font-bold">Seasonal Availability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to Transform Your Look?</h2>
+      <p class="text-xl mb-8 text-primary-50">
+        Schedule a consultation with our medical spa experts today
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:480-597-4835"
+          class="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+        >
+          Call (480) 597-4835
+        </a>
+        <a
+          href="/contact"
+          class="inline-block bg-primary-800 text-white border-2 border-white px-8 py-4 rounded-lg hover:bg-primary-900 transition-colors font-semibold text-lg"
+        >
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

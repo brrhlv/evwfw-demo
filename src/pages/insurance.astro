@@ -3,38 +3,146 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-const pageTitles = {
-  'testimonials': 'Patient Testimonials',
-  'providers': 'Our Providers',
-  'faq': 'Frequently Asked Questions',
-  'forms': 'Patient Forms',
-  'insurance': 'Insurance & Billing',
-  'locations': 'Our Location',
-  'careers': 'Careers'
-};
+const acceptedPlans = [
+  'Banner Health Plans',
+  'Blue Cross Blue Shield',
+  'United Healthcare',
+  'Aetna',
+  'AZ Complete Care/Ambetter',
+  'Cigna',
+  'Mercy Care Plan',
+  'Tricare',
+  'Medicare',
+  'Indian Health Services, Federal Emergency AHCCCS',
+  'VA',
+  'And about 800 others!'
+];
 
-const pageName = Astro.url.pathname.replace(/\//g, '') || 'page';
-const title = pageTitles[pageName] || 'Page';
+const notAcceptedPlans = [
+  'Benefits of America, Inc.',
+  'Care 1st',
+  'Evercare',
+  'Health Choice (or AZ Health Choice)',
+  'MediSys PPO',
+  'Phoenix Health Plan',
+  'United Healthcare Community Care'
+];
 ---
 
-<Layout title={title}>
+<Layout title="Insurance & Billing" description="We accept over 800 insurance plans at East Valley Women for Women">
   <Navigation />
 
-  <section class="py-20 min-h-screen bg-gray-50">
+  <!-- Hero Section -->
+  <section class="relative h-64 flex items-center justify-center bg-primary-700">
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-5xl font-bold mb-4">Insurance & Billing</h1>
+      <p class="text-xl text-gray-100">
+        We accept over 800 insurance plans
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{title}</h1>
-        <p class="text-xl text-gray-600 mb-8">
-          This page will be customized with your specific content.
-        </p>
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <p class="text-gray-700 mb-4">
-            Content for this section will include all relevant information about {title.toLowerCase()}.
-          </p>
-          <a href="/" class="text-primary-600 hover:text-primary-700 font-semibold">
-            ← Back to Home
-          </a>
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Introduction -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+          <div class="flex items-start space-x-4 mb-6">
+            <div class="flex-shrink-0">
+              <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">We Accept Over 800 Insurance Plans!</h2>
+              <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                We take most policies accepted by Chandler Regional Hospital, Mercy Gilbert Medical Center, and Banner Ocotillo. Please call your insurance company to be sure.
+              </p>
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                <p class="text-sm text-yellow-800">
+                  <strong>Important:</strong> Please consult your insurance company and carrier for the most up-to-date information on your policy. Please remember that it is your personal responsibility to maintain an accurate record and knowledge of your policy. Any misinformation may lead to unexpected out-of-pocket costs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Accepted Insurance Plans -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+          <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h2 class="text-3xl font-bold text-gray-900">Accepted Insurance Plans</h2>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            Please see the list below for links to the most popular insurance companies that are currently accepted by East Valley Women for Women.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {acceptedPlans.map((plan) => (
+              <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-gray-900 font-medium">{plan}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- NOT Accepted Insurance Plans -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <svg class="w-8 h-8 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h2 class="text-3xl font-bold text-gray-900">Insurance Plans NOT Accepted</h2>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            Unfortunately, there are some insurance plans that we do not carry. If you have one of these plans, please contact your provider before you visit East Valley Women for Women. We <strong>DO NOT</strong> accept the following plans:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {notAcceptedPlans.map((plan) => (
+              <div class="flex items-center space-x-3 p-3 rounded-lg bg-red-50">
+                <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <span class="text-gray-900 font-medium">{plan}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Questions About Your Insurance?</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Contact our office to verify your insurance coverage before your visit
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:480-597-4835"
+          class="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold text-lg"
+        >
+          Call (480) 597-4835
+        </a>
+        <a
+          href="/contact"
+          class="inline-block bg-white text-primary-700 border-2 border-primary-600 px-8 py-4 rounded-lg hover:bg-primary-50 transition-colors font-semibold text-lg"
+        >
+          Contact Us
+        </a>
       </div>
     </div>
   </section>

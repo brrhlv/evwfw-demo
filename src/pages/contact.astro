@@ -4,19 +4,30 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Contact Us" description="Get in touch for a free consultation and quote">
+<Layout title="Contact Us" description="Contact East Valley Women for Women - Schedule an appointment today">
   <Navigation />
 
   <!-- Hero Section -->
-  <section class="relative h-96 flex items-center justify-center bg-primary-700">
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1920'); mix-blend-mode: overlay;"></div>
-
+  <section class="relative h-96 flex items-center justify-center bg-gradient-to-r from-primary-600 to-primary-700">
     <div class="relative z-10 text-center text-white px-4">
       <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
-      <p class="text-xl text-gray-100">
-        Let's discuss your landscaping project
+      <p class="text-xl text-primary-50">
+        We are always available to answer your questions and schedule an appointment
       </p>
+    </div>
+  </section>
+
+  <!-- Important Notice -->
+  <section class="py-8 bg-yellow-50 border-b-2 border-yellow-200">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-lg text-yellow-900 font-semibold">
+          <strong>IMPORTANT:</strong> We may not be able to accommodate same-day appointments.
+        </p>
+        <p class="text-sm text-yellow-800 mt-2">
+          Calls and emails will be returned within 24 hours or the next business day if after hours or on a weekend or holiday
+        </p>
+      </div>
     </div>
   </section>
 
@@ -26,25 +37,38 @@ import Footer from '../components/Footer.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Request a Free Quote</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Us or Request Appointment</h2>
           <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                Full Name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
-                placeholder="John Smith"
-              />
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
+                />
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
+                />
+              </div>
             </div>
 
             <div>
               <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address *
+                Email *
               </label>
               <input
                 type="email"
@@ -52,13 +76,12 @@ import Footer from '../components/Footer.astro';
                 name="email"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
-                placeholder="john@example.com"
               />
             </div>
 
             <div>
               <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                Phone Number *
+                Phone *
               </label>
               <input
                 type="tel"
@@ -66,47 +89,45 @@ import Footer from '../components/Footer.astro';
                 name="phone"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
-                placeholder="(555) 123-4567"
+                placeholder="(480) 597-4835"
               />
             </div>
 
             <div>
-              <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
-                Property Address
-              </label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
-                placeholder="123 Main St, City, ST 12345"
-              />
-            </div>
-
-            <div>
-              <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
-                Service Interested In *
+              <label for="location" class="block text-sm font-semibold text-gray-700 mb-2">
+                Location *
               </label>
               <select
-                id="service"
-                name="service"
+                id="location"
+                name="location"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
               >
-                <option value="">Select a service...</option>
-                <option value="lawn-care">Lawn Care & Maintenance</option>
-                <option value="landscape-design">Landscape Design & Installation</option>
-                <option value="hardscaping">Hardscaping Services</option>
-                <option value="tree-care">Tree & Shrub Care</option>
-                <option value="irrigation">Irrigation Systems</option>
-                <option value="seasonal">Seasonal Services</option>
-                <option value="other">Other / Multiple Services</option>
+                <option value="">Select a location...</option>
+                <option value="chandler">Chandler - 2181 E Pecos Rd, Suite 1</option>
+                <option value="queen-creek">Queen Creek - 21321 E Ocotillo Rd, Suite 127 (Thursdays Only)</option>
               </select>
             </div>
 
             <div>
+              <label for="provider" class="block text-sm font-semibold text-gray-700 mb-2">
+                Provider Preference (not required)
+              </label>
+              <input
+                type="text"
+                id="provider"
+                name="provider"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
+                placeholder="Type the name of the provider you prefer to see"
+              />
+              <p class="text-sm text-gray-500 mt-1">
+                <a href="/about" class="text-primary-600 hover:text-primary-700">Click here</a> to view the names and information of available providers
+              </p>
+            </div>
+
+            <div>
               <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                Project Details *
+                Comment or Message *
               </label>
               <textarea
                 id="message"
@@ -114,7 +135,7 @@ import Footer from '../components/Footer.astro';
                 required
                 rows="5"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition resize-none"
-                placeholder="Tell us about your project, property size, timeline, and any specific needs..."
+                placeholder="Tell us how we can help you..."
               ></textarea>
             </div>
 
@@ -128,148 +149,299 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <p class="text-sm text-gray-500 text-center">
-              We typically respond within 24 hours
+              Appointment requests are NOT guaranteed. You will be contacted to confirm your requested appointment.
             </p>
           </form>
         </div>
 
-        <!-- Contact Information -->
+        <!-- Office Locations with Tabs -->
         <div class="space-y-8">
-          <!-- Contact Cards -->
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <h2 class="text-3xl font-bold text-gray-900 p-8 pb-6">Our Locations</h2>
 
-            <div class="space-y-6">
-              <!-- Phone -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                  </svg>
+            <!-- Tab Navigation -->
+            <div class="flex border-b border-gray-200 px-8">
+              <button
+                class="tab-button px-6 py-3 font-semibold text-gray-700 border-b-2 border-primary-600 text-primary-600"
+                data-tab="chandler"
+              >
+                Chandler Office
+              </button>
+              <button
+                class="tab-button px-6 py-3 font-semibold text-gray-500 border-b-2 border-transparent hover:text-gray-700"
+                data-tab="queen-creek"
+              >
+                Queen Creek Office
+              </button>
+            </div>
+
+            <!-- Chandler Office Tab Content -->
+            <div id="chandler-tab" class="tab-content p-8">
+              <div class="space-y-6">
+                <!-- Address -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                    <p class="text-gray-700">
+                      2181 E Pecos Rd, Suite 1<br>
+                      Chandler, AZ 85225
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
-                  <a href="tel:555-123-4567" class="text-primary-600 hover:text-primary-700 text-lg">
-                    (555) 123-4567
-                  </a>
-                  <p class="text-gray-500 text-sm mt-1">Mon-Fri: 7am-6pm, Sat: 8am-4pm</p>
+
+                <!-- Phone -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                    <a href="tel:480-597-4835" class="text-primary-600 hover:text-primary-700 text-lg">
+                      (480) 597-4835
+                    </a>
+                  </div>
                 </div>
+
+                <!-- Fax -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Fax</h4>
+                    <p class="text-gray-700">(833) 450-5489</p>
+                  </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Office Hours</h4>
+                    <p class="text-gray-700">
+                      Mon-Thu: 8:00 AM - 5:00 PM<br>
+                      Fri: 8:00 AM - 12:00 PM
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-lg overflow-hidden shadow-md mt-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4!2d-111.787!3d33.306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba76e9e2e5555%3A0x1234567890abcdef!2s2181%20E%20Pecos%20Rd%2C%20Chandler%2C%20AZ%2085225!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Chandler Office Location"
+                  ></iframe>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=2181+E+Pecos+Rd+Suite+1+Chandler+AZ+85225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+                >
+                  Get Directions
+                </a>
               </div>
+            </div>
 
-              <!-- Email -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
+            <!-- Queen Creek Office Tab Content -->
+            <div id="queen-creek-tab" class="tab-content hidden p-8">
+              <div class="space-y-6">
+                <!-- Badge -->
+                <div class="inline-block bg-accent-100 text-accent-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Thursdays Only
                 </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
-                  <a href="mailto:info@greenscapepro.com" class="text-primary-600 hover:text-primary-700 text-lg">
-                    info@greenscapepro.com
-                  </a>
-                  <p class="text-gray-500 text-sm mt-1">We'll respond within 24 hours</p>
-                </div>
-              </div>
 
-              <!-- Address -->
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
+                <!-- Address -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                    <p class="text-gray-700">
+                      21321 E Ocotillo Rd, Suite 127<br>
+                      Queen Creek, AZ 85142
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Office</h4>
-                  <p class="text-gray-700">
-                    123 Garden Street<br>
-                    Green City, ST 12345
-                  </p>
+
+                <!-- Phone -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                    <a href="tel:480-597-4835" class="text-primary-600 hover:text-primary-700 text-lg">
+                      (480) 597-4835
+                    </a>
+                  </div>
                 </div>
+
+                <!-- Fax -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Fax</h4>
+                    <p class="text-gray-700">(833) 450-5489</p>
+                  </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">Office Hours</h4>
+                    <p class="text-gray-700">
+                      Thursdays: 8:00 AM - 5:00 PM
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-lg overflow-hidden shadow-md mt-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4!2d-111.567!3d33.248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba123456789ab%3A0xabcdef1234567890!2s21321%20E%20Ocotillo%20Rd%2C%20Queen%20Creek%2C%20AZ%2085142!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Queen Creek Office Location"
+                  ></iframe>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=21321+E+Ocotillo+Rd+Suite+127+Queen+Creek+AZ+85142"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+                >
+                  Get Directions
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Service Areas -->
+          <!-- Hospital Affiliations -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Service Areas</h3>
-            <p class="text-gray-700 mb-4">
-              We proudly serve the following areas and surrounding communities:
-            </p>
-            <ul class="grid grid-cols-2 gap-2 text-gray-600">
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Affiliated Hospitals</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                Green City
+                Chandler Regional Hospital
               </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                Springfield
+                Mercy Gilbert Medical Center
               </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                Riverside
-              </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                Oakville
-              </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                Meadowbrook
-              </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                Pine Hills
+                Banner Ocotillo
               </li>
             </ul>
-            <p class="text-sm text-gray-500 mt-4">
-              Don't see your area? <a href="tel:555-123-4567" class="text-primary-600 hover:text-primary-700">Call us</a> to check if we service your location.
-            </p>
           </div>
 
-          <!-- Emergency Contact -->
-          <div class="bg-primary-600 text-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold mb-3">Emergency Services</h3>
+          <!-- Online Scheduling -->
+          <div class="bg-gradient-to-br from-primary-600 to-primary-700 text-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-3">Schedule Online</h3>
             <p class="mb-4">
-              Tree down? Storm damage? We offer 24/7 emergency services for urgent situations.
+              Click below to schedule your appointment online through our patient portal.
             </p>
             <a
-              href="tel:555-123-4567"
+              href="https://30624-1.portal.athenahealth.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-block bg-white text-primary-700 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
             >
-              Call Emergency Line
+              Patient Portal
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Map Section (Placeholder) -->
-  <section class="bg-gray-200 h-96">
-    <div class="w-full h-full flex items-center justify-center text-gray-600">
-      <div class="text-center">
-        <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-        </svg>
-        <p class="text-lg font-semibold">Map Placeholder</p>
-        <p class="text-sm mt-2">Replace with Google Maps embed or interactive map</p>
+          <!-- FMLA Notice -->
+          <div class="bg-yellow-50 border-2 border-yellow-200 p-6 rounded-lg">
+            <p class="text-sm text-yellow-900">
+              <strong>Please Note:</strong> There is a $25 processing fee for FMLA and Short Term Disability paperwork.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <Footer />
 </Layout>
+
+<script>
+  // Tab switching functionality
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabName = button.getAttribute('data-tab');
+
+      // Remove active classes from all buttons
+      tabButtons.forEach(btn => {
+        btn.classList.remove('border-primary-600', 'text-primary-600');
+        btn.classList.add('border-transparent', 'text-gray-500');
+      });
+
+      // Add active classes to clicked button
+      button.classList.remove('border-transparent', 'text-gray-500');
+      button.classList.add('border-primary-600', 'text-primary-600');
+
+      // Hide all tab contents
+      tabContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Show selected tab content
+      const selectedTab = document.getElementById(`${tabName}-tab`);
+      if (selectedTab) {
+        selectedTab.classList.remove('hidden');
+      }
+    });
+  });
+</script>

@@ -8,15 +8,103 @@ const providers = [
     name: 'Dr. Denise Y. Belisle',
     credentials: 'MD, FACOG',
     title: 'Board Certified in Obstetrics & Gynecology',
-    bio: 'Dr. Denise Belisle is a board-certified obstetrician and gynecologist with over 25 years of experience in women\'s health. She graduated from Rutgers Robert Wood Johnson Medical School in 1998 and has dedicated her career to providing comprehensive, compassionate care to women of all ages. Dr. Belisle has hospital affiliations with Chandler Regional Medical Center and Mercy Gilbert Medical Center.',
-    specialties: ['Obstetrics', 'Gynecology', 'Well Woman Care', 'Menopausal Management']
+    bio: 'My interest in medicine developed when I was very young. In fifth grade health class I watched the NOVA program "Miracle of Life" and was amazed by the process of human development, from conception to birth. From that moment I knew I wanted to be a physician, taking care of women and participating in the miracle of human life. Being a women\'s healthcare provider is both an honor and a privilege which I greatly enjoy. Our getting to know each other is an important part of providing your complete obstetrical and gynecological care. My getting to know you goes well beyond learning your health history to truly understanding your feelings and concerns as we discuss very sensitive, personal issues. Your getting to know me will help you feel comfortable sharing your concerns. I want you to be confident in knowing that you will receive personalized care from someone you can trust. I enjoy traveling, dining, and spending time with my three children. I appreciate people from various cultures and backgrounds. I love reading a good mystery novel and I especially love to cook, but I don\'t really like having to clean up afterward.',
+    specialties: ['Obstetrics', 'Gynecology', 'Well Woman Care', 'Menopausal Management'],
+    education: [
+      { degree: 'MD', school: 'University of Medicine and Dentistry, Robert Wood Johnson Medical School' },
+      { degree: 'BA, Biology and Psychology', school: 'Rutgers University' }
+    ],
+    training: [
+      { type: 'Residency and Internship (1998-2002)', details: 'Cooper Hospital University Medical Center, New Jersey' }
+    ],
+    certifications: [
+      'American Board of Obstetrics and Gynecology (ABOG)'
+    ],
+    memberships: [
+      'American College of Obstetricians and Gynecologists (ACOG)'
+    ],
+    affiliations: [
+      'Chandler Regional Hospital',
+      'Mercy Gilbert Medical Center',
+      'Banner Ocotillo'
+    ],
+    languages: ['English', 'Spanish']
   },
   {
-    name: 'Dr. Mia Lynne Van Eken',
-    credentials: 'DO, FACOG, MBA',
+    name: 'Dr. Mia Lynne Van',
+    credentials: 'DO, FACOG',
     title: 'Board Certified in OB/GYN & MIGS',
-    bio: 'Dr. Mia Van Eken is a board-certified obstetrician and gynecologist with additional certification in Minimally Invasive Gynecologic Surgery (MIGS). She is one of only a few MIGS-certified surgeons in Arizona. With over 25 years of experience, Dr. Van Eken brings both clinical excellence and business acumen to the practice, having earned her MBA from Saint Joseph\'s University. She specializes in advanced surgical techniques that offer faster recovery times and better outcomes for patients.',
-    specialties: ['Minimally Invasive Surgery', 'Gynecology', 'Pelvic Floor Disorders', 'Advanced Laparoscopy']
+    bio: 'I relocated to Arizona from Philadelphia in 2004. Since that time, I have been practicing OB/GYN in the Chandler and Gilbert area. Prior to that, I practiced in Philadelphia for one and a half years. I became interested in OB/GYN during medical school due to the ability to play a role in women\'s health over the course of their lives. It is wonderful to care for women through all phases of her life including adolescence, childbirth and menopause. I enjoy traveling and spending time with my husband and two children.',
+    specialties: ['Obstetrics', 'Gynecology', 'Minimally Invasive Gynecologic Surgery', 'Women\'s Health'],
+    education: [
+      { degree: 'MBA', school: 'Saint Joseph\'s University, Philadelphia, Pennsylvania' },
+      { degree: 'DO', school: 'Philadelphia College of Osteopathic Medicine, Philadelphia, Pennsylvania' },
+      { degree: 'BA, Psychology (Minors: Biology, Physical Science, Honors in General Education)', school: 'Widener University, Chester, Pennsylvania' }
+    ],
+    training: [
+      { type: 'Internship', details: 'Rotating Internship – Delaware County Community Hospital/Crozier Chester Medical Center/Philadelphia College of Osteopathic Medicine' },
+      { type: 'Residency (1998-2002)', details: 'OB/GYN Residency Training – UMDNJ/Cooper Hospital/University Medical Center, Camden, New Jersey' }
+    ],
+    certifications: [
+      'American Board of Obstetrics and Gynecology (ABOG)',
+      'Minimally Invasive Gynecologic Surgery (MIGS)'
+    ],
+    memberships: [
+      'American Osteopathic Association',
+      'American College of Obstetricians and Gynecologists (ACOG)'
+    ],
+    affiliations: [
+      'Chandler Regional Hospital',
+      'Mercy Gilbert Medical Center',
+      'Banner Ocotillo'
+    ],
+    languages: ['English']
+  },
+  {
+    name: 'Laraine Pizzi',
+    credentials: 'PA-C',
+    title: 'Physician Assistant',
+    bio: 'Originally from Philadelphia, I have called Arizona home since 2003. As a PA, I have practiced in multiple areas of medicine, including primary care, urology and surgery, but my passion is women\'s health. I enjoy taking care of the health needs specific to women and to providing care throughout their lifespan. When not seeing patients, I like to read, officiate lacrosse, travel and spend time with friends, family and my cats.',
+    specialties: ['Women\'s Health', 'Primary Care', 'Well Woman Care'],
+    education: [
+      { degree: 'Physician Assistant', school: 'MCP Hahnemann University' },
+      { degree: 'BS Exercise Science (Minor: Psychology)', school: 'Hofstra University' }
+    ],
+    certifications: [
+      'The National Commission on Certification of Physician Assistants (NCCPA)'
+    ],
+    memberships: [
+      'American Academy of Physician Associates',
+      'Arizona State Association of Physician Assistants',
+      'Association of Physician Associates in Obstetrics and Gynecology',
+      'American College of Obstetricians and Gynecologists'
+    ],
+    affiliations: [
+      'Chandler Regional Medical Center',
+      'Mercy Gilbert Medical Center',
+      'Banner Ocotillo Medical Center'
+    ],
+    languages: ['English']
+  },
+  {
+    name: 'Cyndi Ayoub',
+    credentials: 'WHNP-BC, MSN',
+    title: 'Women\'s Health Nurse Practitioner',
+    bio: 'Healthcare has become an integral part of life for the women of my family. My mother was a Certified Nurse Midwife, my sister is an ultrasound technician and now my daughter is a certified pediatric nurse. I began my career in women\'s health in 2001 as a registered nurse. I always knew that I would obtain my master\'s degree and become a Women\'s Health Nurse Practitioner. After working with new mothers and babies in Couplet Care, I decided I would like to have a longer and more established relationship with my patients. I have enjoyed working with women from different cultures and backgrounds here in Arizona. I am a native Arizonan and completed both my bachelor\'s and master\'s degrees at ASU. I live in Gilbert with my husband, two children and our dogs. I feel my personal experiences as a women\'s health patient have driven me to provide the highest quality of individualized healthcare to women and their families.',
+    specialties: ['Women\'s Health', 'Well Woman Care', 'Family Healthcare'],
+    education: [
+      { degree: 'MSN (Master of Science in Nursing)', school: 'Arizona State University' },
+      { degree: 'BSN (Bachelor of Science in Nursing)', school: 'Arizona State University' }
+    ],
+    certifications: [
+      'Women\'s Health Nurse Practitioner - Board Certified (WHNP-BC)'
+    ],
+    affiliations: [
+      'Chandler Regional Medical Center',
+      'Mercy Gilbert Medical Center',
+      'Banner Ocotillo Medical Center'
+    ],
+    languages: ['English']
   }
 ];
 ---
@@ -140,8 +228,114 @@ const providers = [
     </div>
   </section>
 
-  <!-- Providers Section -->
+  <!-- Office Locations Section -->
   <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Locations</h2>
+        <p class="text-xl text-gray-600">
+          Conveniently serving the East Valley
+        </p>
+      </div>
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Chandler Location -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-primary-700 text-white p-6">
+            <h3 class="text-2xl font-bold mb-2">Chandler Location</h3>
+            <p class="text-primary-100">Main Office</p>
+          </div>
+          <div class="p-6">
+            <div class="mb-4">
+              <div class="flex items-start mb-3">
+                <svg class="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Address</p>
+                  <p class="text-gray-700">2181 E Pecos Rd, Suite 1</p>
+                  <p class="text-gray-700">Chandler, AZ 85225</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map for Chandler -->
+            <div class="rounded-lg overflow-hidden shadow-md mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4!2d-111.787!3d33.306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba76e9e2e5555%3A0x1234567890abcdef!2s2181%20E%20Pecos%20Rd%2C%20Chandler%2C%20AZ%2085225!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Chandler Office Location"
+              ></iframe>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=2181+E+Pecos+Rd+Suite+1+Chandler+AZ+85225"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Queen Creek Location -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-primary-700 text-white p-6">
+            <h3 class="text-2xl font-bold mb-2">Queen Creek Location</h3>
+            <p class="text-primary-100">Thursdays Only</p>
+          </div>
+          <div class="p-6">
+            <div class="mb-4">
+              <div class="flex items-start mb-3">
+                <svg class="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Address</p>
+                  <p class="text-gray-700">21321 E Ocotillo Rd, Suite 127</p>
+                  <p class="text-gray-700">Queen Creek, AZ 85142</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map for Queen Creek -->
+            <div class="rounded-lg overflow-hidden shadow-md mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4!2d-111.567!3d33.248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba123456789ab%3A0xabcdef1234567890!2s21321%20E%20Ocotillo%20Rd%2C%20Queen%20Creek%2C%20AZ%2085142!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Queen Creek Office Location"
+              ></iframe>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=21321+E+Ocotillo+Rd+Suite+127+Queen+Creek+AZ+85142"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block w-full text-center bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Providers Section -->
+  <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Providers</h2>
@@ -173,7 +367,7 @@ const providers = [
                   </p>
                 </div>
 
-                <div>
+                <div class="mb-6">
                   <h4 class="text-lg font-bold text-gray-900 mb-3">Specialties</h4>
                   <div class="flex flex-wrap gap-2">
                     {provider.specialties.map((specialty) => (
@@ -183,6 +377,89 @@ const providers = [
                     ))}
                   </div>
                 </div>
+
+                {provider.education && (
+                  <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Educational Background</h4>
+                    <div class="space-y-2">
+                      {provider.education.map((edu) => (
+                        <div class="text-gray-700">
+                          <p class="font-semibold">{edu.degree}</p>
+                          <p class="text-sm">{edu.school}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {provider.training && (
+                  <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Training</h4>
+                    <div class="space-y-2">
+                      {provider.training.map((train) => (
+                        <div class="text-gray-700">
+                          <p class="font-semibold">{train.type}</p>
+                          <p class="text-sm">{train.details}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {provider.certifications && (
+                  <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Board Certifications</h4>
+                    <ul class="space-y-1">
+                      {provider.certifications.map((cert) => (
+                        <li class="text-gray-700 text-sm flex items-start">
+                          <svg class="w-4 h-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          {cert}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {provider.memberships && (
+                  <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Memberships and Societies</h4>
+                    <ul class="space-y-1">
+                      {provider.memberships.map((membership) => (
+                        <li class="text-gray-700 text-sm flex items-start">
+                          <svg class="w-4 h-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          {membership}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {provider.affiliations && (
+                  <div class="mb-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Hospital Affiliations</h4>
+                    <ul class="space-y-1">
+                      {provider.affiliations.map((affiliation) => (
+                        <li class="text-gray-700 text-sm flex items-start">
+                          <svg class="w-4 h-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          {affiliation}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {provider.languages && (
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3">Languages Spoken</h4>
+                    <p class="text-gray-700 text-sm">{provider.languages.join(', ')}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
